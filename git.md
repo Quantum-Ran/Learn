@@ -23,18 +23,35 @@ git clone
 - 版本管理
 
 ```bash
-# 已修改的文件 → 暂存区
+# 新增文件 工作区 → 暂存区
 git add 文件
 
-# 暂存区 → 已修改的文件
+# 新增文件 暂存区 → 工作区
 git rm --cached 文件
 
 # 暂存区 → 版本库
-git commit
-
-
-
+git commit -m '信息'
 ```
+
+- git rm VS rm
+
+```bash
+# 完成了
+# 1 删除文件 2 工作区 → 暂存区
+git rm 文件
+
+# 若想恢复
+# 1 删除文件 暂存区 → 工作区
+git reset HEAD 文件
+# 2 将工作区中的修改丢弃掉
+git checkout -- 文件
+
+# 完成了 删除文件
+rm
+# 
+```
+
+
 
 - 查看信息
 
